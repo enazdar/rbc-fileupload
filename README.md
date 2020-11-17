@@ -11,9 +11,10 @@ Things to improve:
 2. integrate user access (login, read write)
 3. Integrate error and exception handling
 4. Integrate more unit testcase
-... What I really wanted to add was:
-.. the objectvalues so that the data that is being uploaded be parsed
+
+What I really wanted to add was:
+a.. the objectvalues so that the data that is being uploaded be parsed
 and stored into this object values (to resolve the integrity of data and improve error handling )
-.. Updating the file is now have no way of stopping the user from adding invalid data.
-.. Search is only happening in the stock id, which again is not being processed.
-.. I did not write a parser to parse the data file and read into the data object values
+b.. Updating the file is now have no way of stopping the user from adding invalid data.
+c.. Search is only happening in the stock id, which again is not being processed.
+d.. I did not write a parser to parse the data file and read into the data object values
