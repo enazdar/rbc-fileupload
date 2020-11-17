@@ -1,0 +1,44 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<body>
+
+	<div th:if="${message}">
+		<h2 th:text="${message}"/>
+	</div>
+
+	<div>
+		<form method="POST" enctype="multipart/form-data" action="/">
+			<table>
+				<tr><td>File to upload:</td><td><input type="file" name="file" /></td></tr>
+				<tr><td></td><td><input type="submit" value="Upload" /></td></tr>
+			</table>
+		</form>
+	</div>
+
+	<div>
+		<ul>
+			<li th:each="file : ${files}">
+				<a th:href="${file}" th:text="${file}" />
+			</li>
+		</ul>
+	</div>
+
+	<div class="topnav">
+		<form method="GET" enctype="multipart/form-data" action="/stock">
+			<tr><td>Search records by stock value:</td><td><input type="text" name="stockId" placeholder="Search.."/></td></tr>
+			<tr><td></td><td><input type="submit" value="Search" /></td></tr>
+		</form>
+
+	</div>
+
+	<div class="topnav">
+		<form action="/record" enctype="multipart/form-data" method="POST">
+			<tr><td>Add a record:</td></tr>
+			<tr><td>Enter File name: <input type="text" name="fileName" placeholder="Enter file name"/></td></tr>
+			<tr><td>Enter record data:</td><td><input type="text" name="newRecord" placeholder="Enter Record data .."/></td></tr>
+			<tr><td></td><td><input type="submit" value="Update" /></td></tr>
+		</form>
+
+	</div>
+
+</body>
+</html>
