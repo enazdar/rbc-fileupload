@@ -20,7 +20,6 @@ public interface StorageService {
 	Path load(String filename);
 
 	Resource loadAsResource(String filename);
-	MarketValue getMarketRecord(String marketValue);
 
 	List<String> findAll(String stock);
 

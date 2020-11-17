@@ -15,7 +15,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
-import com.rbc.demo.domain.MarketValue;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
@@ -98,11 +97,6 @@ public class FileSystemStorageService implements StorageService {
 	}
 
 	@Override
-	public MarketValue getMarketRecord(final String marketValue) {
-		return null;
-	}
-
-	@Override
 	public List<String> findAll(final String stock) {
 		return searchByStockName(stock);
 	}
@@ -119,7 +113,6 @@ public class FileSystemStorageService implements StorageService {
 			throw new StorageFileNotFoundException("Could not read file: " + fileName, e);
 		}
 	}
-
 
 	@Override
 	public void deleteAll() {
