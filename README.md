@@ -5,6 +5,7 @@ In order to succesfully run the project
 Java 8 or higher
 since no extrenal tools or application is being used, no DBs are integrated
 in order to search the file or update it, one must upload the file everytime the server is restarted
+I also used https://spring.io/guides/gs/uploading-files/ as a reference
 
 Things to improve:
 1. integrate a DB or a systems to keep the data securly
