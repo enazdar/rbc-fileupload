@@ -20,6 +20,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
 
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.util.FileSystemUtils;
 
@@ -36,6 +37,7 @@ public class FileSystemStorageService implements StorageService {
 	}
 
 	@Override
+	@Async
 	public void store(MultipartFile file) {
 		try {
 			if (file.isEmpty()) {
@@ -102,6 +104,7 @@ public class FileSystemStorageService implements StorageService {
 	}
 
 	@Override
+	@Async
 	public void updateRecord(final String fileName, final String newRecord) {
 		openFileToUpdate(fileName, newRecord);
 	}
@@ -130,6 +133,7 @@ public class FileSystemStorageService implements StorageService {
 	}
 
 	//Note: we actually want this to return a list of MarketValues
+	@Async
 	public List<String> searchByStockName(String stock){
 		int count = 0;
 		double countBuffer=0;
